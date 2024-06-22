@@ -13,7 +13,7 @@ export default function SubNav() {
       variants={subNav}
       className="block overflow-hidden md:hidden"
     >
-      <div className="flex items-center  px-4 pb-4">
+      <div className="flex-align px-4 pb-4">
         <SubNavLinks />
       </div>
     </motion.div>

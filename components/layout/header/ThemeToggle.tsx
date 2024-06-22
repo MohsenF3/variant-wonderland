@@ -49,7 +49,7 @@ export default function ThemeToggle() {
         <motion.span
           layout
           transition={{ type: "spring", damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600"
+          className="h-full w-1/2 rounded-full button-gradient"
         />
       </div>
     </div>

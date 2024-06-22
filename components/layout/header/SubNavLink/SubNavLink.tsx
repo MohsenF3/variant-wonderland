@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { MotionConfig, motion } from "framer-motion";
 
 import { currentLink, subNavLink, underLink } from "./SubNavLink.variants";
 import { cn } from "@/lib/utils";
@@ -31,34 +31,24 @@ export default function SubNavLink({ id, name, path }: SubNavLinkProps) {
           initial="initial"
           whileHover="hovered"
           className={cn(
-            "relative translate-x-7 transition-transform duration-150 overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl",
+            "relative translate-x-7 transition-transform duration-150 overflow-hidden whitespace-nowrap text-3xl font-black",
             {
               "translate-x-10": pathname === path,
             }
           )}
         >
-          <motion.span
-            variants={currentLink}
-            transition={TRANSITION}
-            style={{
-              y: pathname === path ? "-200%" : 0,
-              opacity: pathname === path ? 0 : 1,
-            }}
-            className="inline-block"
-          >
-            {name}
-          </motion.span>
+          <MotionConfig transition={TRANSITION}>
+            <motion.span variants={currentLink} className="inline-block">
+              {name}
+            </motion.span>
 
-          <motion.span
-            variants={underLink}
-            transition={TRANSITION}
-            style={{
-              y: pathname === path ? 0 : "200%",
-            }}
-            className="inline-block absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600"
-          >
-            {name}
-          </motion.span>
+            <motion.span
+              variants={underLink}
+              className="inline-block absolute inset-0 text-transparent bg-clip-text button-gradient"
+            >
+              {name}
+            </motion.span>
+          </MotionConfig>
         </motion.div>
       </Link>
 

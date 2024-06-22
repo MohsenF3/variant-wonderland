@@ -4,7 +4,7 @@ import NavigationLink from "./NavigationLink";
 export default function NavigationLinks() {
   return (
     <nav className="hidden md:block">
-      <ul className="items-center gap-2 flex">
+      <ul className="flex-align gap-2">
         {NAVIGATION_LINKS.map((link) => (
           <NavigationLink key={link.id} {...link} />
         ))}

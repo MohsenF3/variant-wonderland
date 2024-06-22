@@ -3,8 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    ---background-color: hsl(20 14.3% 4.1%);
+    ---foreground-color: hsl(60 9.1% 97.8%);
+  }
+}
+@layer base {
   body {
-    background-color: hsl(20 14.3% 4.1%);
-    color: hsl(60 9.1% 97.8%);
+    background-color: var(---background-color);
+    color: var(---foreground-color);
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .flex-align {
+    display: flex;
+    align-items: center;
+  }
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button-gradient {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-600;
   }
 }
