@@ -1,7 +1,15 @@
+import FAQ from "@/components/home/FAQ/FAQ";
+import Hero from "@/components/home/Hero";
+import Variants from "@/components/home/Variants";
+
 export default function Home() {
   return (
-    <div>
-      <h1>hello variant wonderland</h1>
-    </div>
+    <main>
+      <Hero />
+
+      <Variants />
+
+      <FAQ />
+    </main>
   );
 }

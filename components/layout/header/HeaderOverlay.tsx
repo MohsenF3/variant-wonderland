@@ -7,7 +7,8 @@ export default function HeaderOverlay() {
   return (
     <motion.div
       onClick={() => toggleOpen()}
-      className="fixed inset-0 -z-50 cursor-pointer bg-neutral-950/50 backdrop-blur"
+      className="block md:hidden fixed inset-0 z-20 cursor-pointer bg-background/50 backdrop-blur"
+      initial={false}
       animate={{
         opacity: isOpen ? 1 : 0,
         pointerEvents: isOpen ? "auto" : "none",

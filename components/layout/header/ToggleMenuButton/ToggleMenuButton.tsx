@@ -16,21 +16,21 @@ export default function ToggleMenuButton() {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         onClick={toggleOpen}
-        className="relative w-7 h-16 rounded-full bg-white/0 md:hidden block"
+        className="relative block h-16 w-7 rounded-full bg-foreground/0 md:hidden"
       >
         <motion.span
           variants={toggleMenu.top}
-          className="absolute h-1 w-full bg-white"
+          className="absolute h-1 w-full bg-foreground"
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={toggleMenu.middle}
-          className="absolute h-1 w-full bg-white"
+          className="absolute h-1 w-full bg-foreground"
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={toggleMenu.bottom}
-          className="absolute h-1 w-[60%] bg-white"
+          className="absolute h-1 w-[60%] bg-foreground"
           style={{
             x: "-50%",
             y: "50%",

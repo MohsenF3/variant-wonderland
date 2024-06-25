@@ -1,7 +1,7 @@
 export const subNav = {
   open: {
     opacity: 1,
-    height: 200,
+    height: 250,
     transition: {
       restDelta: 2,
     },

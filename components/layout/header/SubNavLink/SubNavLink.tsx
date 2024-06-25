@@ -31,7 +31,7 @@ export default function SubNavLink({ id, name, path }: SubNavLinkProps) {
           initial="initial"
           whileHover="hovered"
           className={cn(
-            "relative translate-x-7 transition-transform duration-150 overflow-hidden whitespace-nowrap text-3xl font-black",
+            "relative translate-x-7 overflow-hidden whitespace-nowrap text-3xl font-black transition-transform duration-150",
             {
               "translate-x-10": pathname === path,
             }
@@ -44,7 +44,7 @@ export default function SubNavLink({ id, name, path }: SubNavLinkProps) {
 
             <motion.span
               variants={underLink}
-              className="inline-block absolute inset-0 text-transparent bg-clip-text button-gradient"
+              className="button-gradient absolute inset-0 inline-block bg-clip-text text-transparent"
             >
               {name}
             </motion.span>
@@ -66,7 +66,7 @@ function ArrowRight({ pathname, path }: ArrowRightProps) {
   return (
     <span
       className={cn(
-        "absolute top-[50%] transition-transform duration-150  right-[calc(100%-27px)] -translate-x-[50%] -translate-y-[50%]",
+        "absolute right-[calc(100%-27px)] top-[50%] -translate-x-[50%] -translate-y-[50%] transition-transform duration-150",
         {
           "translate-x-1": pathname === path,
         }
