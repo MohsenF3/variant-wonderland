@@ -40,14 +40,7 @@ interface ButtonProps {
 function Button({ id, title, tabIndex, onTabChange, layoutId }: ButtonProps) {
   return (
     <button className="relative w-full p-3 " onClick={() => onTabChange(id)}>
-      <span
-        className="font-medium transition-colors delay-100"
-        style={{
-          color: id === tabIndex ? "hsl(var(--background))" : "",
-        }}
-      >
-        {title}
-      </span>
+      <span className="font-medium">{title}</span>
 
       {/* floating background */}
       {id === tabIndex ? (

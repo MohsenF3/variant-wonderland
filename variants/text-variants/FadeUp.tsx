@@ -1,4 +1,4 @@
-import { Variants, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const FADE_UP_VARIANTS_CONTAINER = {
   hidden: {},
@@ -17,9 +17,6 @@ const FADE_UP_VARIANTS = {
     transition: {
       type: "spring",
       duration: 1.5,
-      repeat: Infinity,
-      repeatType: "reverse",
-      repeatDelay: 2,
     },
   },
 };
@@ -30,18 +27,15 @@ export function FadeUp() {
       initial="hidden"
       whileInView="show"
       variants={FADE_UP_VARIANTS_CONTAINER}
-      className="text-xl md:text-2xl"
+      className="text-xl md:text-2xl grid-center w-full h-full"
     >
       <motion.h1
         className="font-display text-center text-5xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem] mb-3"
-        variants={FADE_UP_VARIANTS as Variants}
+        variants={FADE_UP_VARIANTS}
       >
         Fade Up
       </motion.h1>
-      <motion.p
-        className="text-center font-medium"
-        variants={FADE_UP_VARIANTS as Variants}
-      >
+      <motion.p className="text-center font-medium" variants={FADE_UP_VARIANTS}>
         Animation
       </motion.p>
     </motion.div>

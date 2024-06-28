@@ -1,6 +1,6 @@
 "use client";
 
-import { MultiDirectionSlide } from "@/variants/text-variants/MultyDirectionSlide";
+import { MultiDirectionSlide } from "@/variants/text-variants/MultiDirectionSlide";
 import VariantsCompound from "./VariantsCompound";
 import { SeparateAnimation } from "@/variants/text-variants/SeparateAnimation";
 import { FadeDown } from "@/variants/text-variants/FadeDown";
@@ -16,19 +16,19 @@ export default function TextVariants() {
       />
 
       <VariantsCompound.Items>
-        <VariantsCompound.Item className="grid-center">
+        <VariantsCompound.Item>
           <MultiDirectionSlide />
         </VariantsCompound.Item>
 
-        <VariantsCompound.Item className="grid-center">
+        <VariantsCompound.Item>
           <SeparateAnimation />
         </VariantsCompound.Item>
 
-        <VariantsCompound.Item className="grid-center">
+        <VariantsCompound.Item>
           <FadeDown />
         </VariantsCompound.Item>
 
-        <VariantsCompound.Item className="grid-center">
+        <VariantsCompound.Item>
           <FadeUp />
         </VariantsCompound.Item>
       </VariantsCompound.Items>

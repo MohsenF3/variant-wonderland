@@ -1,6 +1,6 @@
 import TextVariants from "./TextVariants";
 import PageVariants from "./PageVariants";
-import SectionTitle from "../SectionTitle";
+import SectionTitle from "../shared/SectionTitle";
 
 export default function Variants() {
   return (

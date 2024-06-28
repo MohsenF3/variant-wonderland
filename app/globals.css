@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
+    --background: 0 0% 95%;
     --foreground: 20 14.3% 4.1%;
     --card: 0 0% 100%;
     --card-foreground: 20 14.3% 4.1%;
@@ -87,5 +87,14 @@
   }
   .button-gradient {
     @apply bg-gradient-to-r from-violet-600 to-indigo-600;
+  }
+
+  .bg-foreground-gradient {
+    @apply bg-gradient-to-br from-foreground/20 to-foreground/5;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

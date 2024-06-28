@@ -11,7 +11,7 @@ import HeaderOverlay from "./HeaderOverlay";
 export default function Header() {
   return (
     <HeaderProvider>
-      <header className="fixed left-0 right-0 top-0 z-30 mx-auto max-w-6xl overflow-hidden md:border-[1px] border-foreground/10 bg-gradient-to-br from-foreground/20 to-foreground/5 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl">
+      <header className="fixed left-0 right-0 top-0 z-30 mx-auto max-w-6xl overflow-hidden md:border-[1px] border-foreground/10 bg-foreground-gradient backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl">
         <div className="flex-between p-3 md:p-5">
           <NavigationLinks />
 

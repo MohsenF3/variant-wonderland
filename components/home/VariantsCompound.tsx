@@ -1,13 +1,9 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 interface PropsWithChildren {
   children: React.ReactNode;
-}
-interface ItemProps extends PropsWithChildren {
-  className?: string;
 }
 
 interface HeadingProps {
@@ -27,7 +23,9 @@ function VariantsCompound({ children }: PropsWithChildren) {
 const Heading = ({ title, description, href }: HeadingProps) => {
   return (
     <div className="flex h-fit w-full flex-col justify-center py-5 md:sticky md:top-0 md:h-screen">
-      <h2 className="mb-4 mt-2 text-5xl font-semibold leading-tight">{title}</h2>
+      <h2 className="mb-4 mt-2 text-5xl font-semibold leading-tight">
+        {title}
+      </h2>
       <p className="text-lg text-muted-foreground">{description}</p>
       <Link
         href={href}
@@ -53,7 +51,7 @@ const Items = ({ children }: PropsWithChildren) => {
   );
 };
 
-function Item({ children, className }: ItemProps) {
+function Item({ children }: PropsWithChildren) {
   const targetRef = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -66,10 +64,7 @@ function Item({ children, className }: ItemProps) {
   return (
     <motion.div
       ref={targetRef}
-      className={cn(
-        "aspect-video bg-muted shadow-lg w-full shrink-0 overflow-hidden rounded-2xl border",
-        className
-      )}
+      className="aspect-video bg-muted shadow-lg w-full shrink-0 overflow-hidden rounded-2xl border"
       style={{
         scale,
         opacity,

@@ -7,15 +7,13 @@ const SEPARATE_VARIANTS = {
     y: custom * 15,
     transition: {
       duration: 1,
-      repeat: Infinity,
-      repeatDelay: 2,
     },
   }),
 };
 
 export function SeparateAnimation() {
   return (
-    <div>
+    <div className="grid-center w-full h-full">
       <motion.h1
         custom={-1}
         variants={SEPARATE_VARIANTS}

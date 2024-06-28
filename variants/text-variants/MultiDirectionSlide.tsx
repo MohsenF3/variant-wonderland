@@ -7,8 +7,6 @@ const MULTI_DIRECTION_SLIDE_VARIANTS = {
     x: 0,
     transition: {
       duration: 1,
-      repeat: Infinity,
-      repeatDelay: 2,
     },
   },
   right: { opacity: 0, x: "25vw" },
@@ -16,7 +14,7 @@ const MULTI_DIRECTION_SLIDE_VARIANTS = {
 
 export function MultiDirectionSlide() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden grid-center w-full h-full">
       <motion.h1
         initial="hidden"
         whileInView="visible"

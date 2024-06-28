@@ -1,7 +1,7 @@
 "use client";
 
 import InnerPerspective from "@/variants/page-variants/InnerPerspectiveTransition/InnerPerspectiveTransition";
-import PageVariantItem from "./PageVariantItem";
+import PageVariantItem from "../shared/PageVariantItem";
 import VariantsCompound from "./VariantsCompound";
 import StairsTransition from "@/variants/page-variants/StairsTransition/StairsTransition";
 

@@ -11,7 +11,7 @@ interface FAQPanelProps {
   answer: string;
   id: number;
   open: number;
-  setOpen: (id: number) => void;
+  onOpen: (id: number) => void;
 }
 
 export default function FAQPanel(props: FAQPanelProps) {
@@ -22,7 +22,7 @@ export default function FAQPanel(props: FAQPanelProps) {
     <>
       <button
         className="group relative flex flex-row-reverse items-center justify-end gap-4 border-b-[1px] border-slate-200 p-3 transition-colors lg:flex-col lg:border-r-[1px]"
-        onClick={() => props.setOpen(props.id)}
+        onClick={() => props.onOpen(props.id)}
       >
         <span
           style={{

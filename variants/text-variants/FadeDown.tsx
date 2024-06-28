@@ -1,4 +1,4 @@
-import { Variants, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 const FADE_DOWN_VARIANTS_CONTAINER = {
   hidden: {},
@@ -17,9 +17,6 @@ const FADE_DOWN_VARIANTS = {
     transition: {
       type: "spring",
       duration: 1.5,
-      repeat: Infinity,
-      repeatType: "reverse",
-      repeatDelay: 2,
     },
   },
 };
@@ -30,17 +27,17 @@ export function FadeDown() {
       initial="hidden"
       whileInView="show"
       variants={FADE_DOWN_VARIANTS_CONTAINER}
-      className="text-xl md:text-2xl"
+      className="text-xl md:text-2xl grid-center w-full h-full"
     >
       <motion.h1
         className="font-display text-center text-5xl mb-3 font-bold tracking-[-0.02em] drop-shadow-sm md:text-7xl md:leading-[5rem]"
-        variants={FADE_DOWN_VARIANTS as Variants}
+        variants={FADE_DOWN_VARIANTS}
       >
         Fade Down
       </motion.h1>
       <motion.p
         className="text-center font-medium"
-        variants={FADE_DOWN_VARIANTS as Variants}
+        variants={FADE_DOWN_VARIANTS}
       >
         Animation
       </motion.p>

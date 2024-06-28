@@ -3,6 +3,7 @@ import { subNav } from "./SubNav.variants";
 import SubNavLinks from "../SubNavLinks/SubNavLinks";
 import { useHeader } from "@/context/HeaderProvider";
 import ThemeToggle from "../ThemeToggle";
+import SocialButtons from "@/components/shared/SocialButtons";
 
 export default function SubNav() {
   const { isOpen } = useHeader();
@@ -20,9 +21,11 @@ export default function SubNav() {
 
       <motion.div
         animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : 200 }}
-        className="block px-4 pt-5 sm:hidden"
+        className="flex-between px-4 pt-5 sm:hidden"
       >
         <ThemeToggle />
+
+        <SocialButtons />
       </motion.div>
     </motion.div>
   );
