@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Variant Wonderland",
   description: "A collection of free and handmade framer motion variants",
+  openGraph: {
+    title: "Variant Wonderland",
+    description: "A collection of free and handmade framer motion variants",
+  },
 };
 
 export default function RootLayout({
