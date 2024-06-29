@@ -12,7 +12,7 @@ export default function PageVariantItem(props: PageVariantItemProps) {
 
   return (
     <div className="h-full w-full overflow-hidden border">
-      <ul className="flex items-center justify-between border-b relative z-10">
+      <div className="flex items-center justify-between border-b relative z-10">
         {PAGE_VARIANTS_TABS.map((tab) => (
           <Button
             key={tab.id}
@@ -22,7 +22,7 @@ export default function PageVariantItem(props: PageVariantItemProps) {
             {...tab}
           />
         ))}
-      </ul>
+      </div>
 
       {props.render(PAGE_VARIANTS_TABS[tabIndex - 1].name)}
     </div>

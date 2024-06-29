@@ -82,7 +82,7 @@ function HeroButton({ border, boxShadow }: HeroButtonProps) {
       whileTap={{
         scale: 0.985,
       }}
-      className="group relative w-fit rounded-full bg-foreground/10 px-4 py-2 text-foreground transition-colors hover:bg-foreground/5"
+      className="group relative w-fit rounded-full bg-foreground/10 px-4 py-2 text-foreground transition-colors hover:bg-foreground/5 min-w-[24px] min-h-[24px]"
     >
       <Link href="/text-variants" className="flex-align w-full gap-1.5">
         Explore Demos

@@ -24,17 +24,17 @@ export default function FAQPanel(props: FAQPanelProps) {
         className="group relative flex flex-row-reverse items-center justify-end gap-4 border-b-[1px] border-slate-200 p-3 transition-colors lg:flex-col lg:border-r-[1px]"
         onClick={() => props.onOpen(props.id)}
       >
-        <span
+        <h2
           style={{
             writingMode: "vertical-lr",
           }}
           className="hidden rotate-180 text-xl font-medium lg:block"
         >
           {props.question}
-        </span>
-        <span className="block text-xl font-medium lg:hidden">
+        </h2>
+        <h2 className="block text-xl font-medium lg:hidden">
           {props.question}
-        </span>
+        </h2>
       </button>
 
       <AnimatePresence>

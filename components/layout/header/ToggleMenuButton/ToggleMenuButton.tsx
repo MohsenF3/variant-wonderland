@@ -16,6 +16,7 @@ export default function ToggleMenuButton() {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         onClick={toggleOpen}
+        aria-label="toggle menu button"
         className="relative block h-16 w-7 rounded-full bg-foreground/0 md:hidden"
       >
         <motion.span

@@ -37,6 +37,7 @@ export default function ThemeToggle() {
   return (
     <div className="relative flex w-fit items-center rounded-full">
       <button
+        aria-label="Switch to light theme"
         className={cn(TOGGLE_CLASSES, {
           "text-white": theme === Theme_Modes.Light,
         })}
@@ -47,6 +48,7 @@ export default function ThemeToggle() {
       </button>
 
       <button
+        aria-label="Switch to dark theme"
         className={cn(TOGGLE_CLASSES, {
           "text-white": theme === Theme_Modes.Dark,
         })}
