@@ -1,16 +1,23 @@
 import React from "react";
 
 export const useVisibilityChange = () => {
+  const isBrowser = typeof window !== "undefined";
+
   const [mounted, setMounted] = React.useState(false);
-  React.useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) return null;
-
-  const originalDocumentTitleRef = React.useRef(document.title);
 
   React.useEffect(() => {
+    if (isBrowser) {
+      setMounted(true);
+    }
+  }, [isBrowser]);
+
+  const originalDocumentTitleRef = React.useRef("");
+
+  React.useEffect(() => {
+    if (!isBrowser || !mounted) return;
+
+    originalDocumentTitleRef.current = document.title;
+
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
         document.title = originalDocumentTitleRef.current;
@@ -26,5 +33,7 @@ export const useVisibilityChange = () => {
     return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
-  }, []);
+  }, [isBrowser, mounted]);
+
+  return null;
 };
