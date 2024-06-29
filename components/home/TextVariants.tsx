@@ -3,8 +3,8 @@
 import { MultiDirectionSlide } from "@/variants/text-variants/MultiDirectionSlide";
 import VariantsCompound from "./VariantsCompound";
 import { SeparateAnimation } from "@/variants/text-variants/SeparateAnimation";
-import { FadeDown } from "@/variants/text-variants/FadeDown";
-import { FadeUp } from "@/variants/text-variants/FadeUp";
+import { LetterPullUp } from "@/variants/text-variants/LetterPullUp";
+import { GradualSpacing } from "@/variants/text-variants/GradualSpacing";
 
 export default function TextVariants() {
   return (
@@ -21,15 +21,15 @@ export default function TextVariants() {
         </VariantsCompound.Item>
 
         <VariantsCompound.Item>
+          <LetterPullUp />
+        </VariantsCompound.Item>
+
+        <VariantsCompound.Item>
+          <GradualSpacing />
+        </VariantsCompound.Item>
+
+        <VariantsCompound.Item>
           <SeparateAnimation />
-        </VariantsCompound.Item>
-
-        <VariantsCompound.Item>
-          <FadeDown />
-        </VariantsCompound.Item>
-
-        <VariantsCompound.Item>
-          <FadeUp />
         </VariantsCompound.Item>
       </VariantsCompound.Items>
     </VariantsCompound>

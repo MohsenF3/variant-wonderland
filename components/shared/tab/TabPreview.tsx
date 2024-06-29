@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CopyBlock, github, dracula } from "react-code-blocks";
+import { CopyBlock, github, monokaiSublime} from "react-code-blocks";
 import { useTheme } from "next-themes";
 import { useLenis } from "@/hooks/useLenis";
 import { cn } from "@/lib/utils";
@@ -37,7 +37,7 @@ export default function TabPreview({
         <CopyBlock
           text={code}
           language="jsx"
-          theme={resolvedTheme === "dark" ? dracula : github}
+          theme={resolvedTheme === "dark" ? monokaiSublime : github}
           codeBlock
         />
       )}
