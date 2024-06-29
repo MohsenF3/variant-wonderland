@@ -1,6 +1,13 @@
 import React from "react";
 
 export const useVisibilityChange = () => {
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
   const originalDocumentTitleRef = React.useRef(document.title);
 
   React.useEffect(() => {
